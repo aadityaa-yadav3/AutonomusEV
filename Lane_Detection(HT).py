@@ -25,7 +25,6 @@ while True:
 
     # dettecting edges in the frame using canny
     canny = cv.Canny(mask, 100, 120)
-    # cv.imshow("canny", canny)
 
     # using hough transform to get the lines of lane
     lines = cv.HoughLinesP(canny, rho = 2, theta = 1*np.pi/180, threshold = 20, minLineLength = 10, maxLineGap = 10)

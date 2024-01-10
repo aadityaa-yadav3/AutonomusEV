@@ -42,7 +42,6 @@ def perspective_warp(image):
 
     # Apply perspective transformation
     birdseye = cv2.warpPerspective(image, matrix, (image.shape[1], image.shape[0]))
-    # cv2.imshow("birdseye", birdseye)
 
     return birdseye, inverse_matrix
 
@@ -262,7 +261,7 @@ def add_text(img, radius, direction, deviation, dev_direction):
 
 
 def main():
-    video_path = 'C:/Users/hp/Downloads/drive.mp4'
+    video_path = 'C:/Users/hp/Downloads/videoplayback.mp4'
     video = read_video(video_path)
 
     while True:
